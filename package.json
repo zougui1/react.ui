@@ -28,6 +28,8 @@
     "@tanstack/react-query": "^5.50.0",
     "@tanstack/react-table": "^8.19.3",
     "clsx": "^2.1.1",
+    "cmdk": "^1.0.0",
+    "lucide-react": "^0.424.0",
     "react-hook-form": "^7.52.1",
     "tailwind-merge": "^2.4.0",
     "tailwind-variants": "^0.2.1"
