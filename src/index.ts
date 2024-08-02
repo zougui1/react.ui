@@ -7,5 +7,6 @@ export * from './components/atoms/Textarea';
 export * from './components/atoms/Typography';
 
 export * from './components/molecules/Dialog';
+export * from './components/molecules/Popover';
 
 export * from './utils';
