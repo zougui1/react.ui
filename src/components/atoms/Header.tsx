@@ -12,7 +12,7 @@ export const Header = React.forwardRef<
       ref={ref}
       className={cn(
         'sticky top-0 h-14',
-        'flex justify-between items-center',
+        'container flex justify-between items-center',
         'backdrop-blur-[2px] bg-black/80 shadow-lg',
         className,
       )}
