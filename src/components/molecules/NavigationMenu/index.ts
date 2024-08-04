@@ -6,6 +6,7 @@ import type { NavigationMenuItemProps } from '@radix-ui/react-navigation-menu';
 import { NavigationMenuContent, type NavigationMenuContentProps } from './NavigationMenuContent';
 import { NavigationMenuIndicator, type NavigationMenuIndicatorProps } from './NavigationMenuIndicator';
 import { NavigationMenuLink, type NavigationMenuLinkProps } from './NavigationMenuLink';
+import { NavigationMenuLinkItem, type NavigationMenuLinkItemProps } from './NavigationMenuLinkItem';
 import { NavigationMenuList, type NavigationMenuListProps } from './NavigationMenuList';
 import { NavigationMenuRoot, type NavigationMenuRootProps } from './NavigationMenuRoot';
 import { NavigationMenuTrigger, type NavigationMenuTriggerProps } from './NavigationMenuTrigger';
@@ -16,6 +17,7 @@ export const NavigationMenu = {
   Content: NavigationMenuContent,
   Indicator: NavigationMenuIndicator,
   Link: NavigationMenuLink,
+  LinkItem: NavigationMenuLinkItem,
   List: NavigationMenuList,
   Root: NavigationMenuRoot,
   Trigger: NavigationMenuTrigger,
@@ -27,6 +29,7 @@ export type {
   NavigationMenuContentProps,
   NavigationMenuIndicatorProps,
   NavigationMenuLinkProps,
+  NavigationMenuLinkItemProps,
   NavigationMenuListProps,
   NavigationMenuRootProps,
   NavigationMenuTriggerProps,
