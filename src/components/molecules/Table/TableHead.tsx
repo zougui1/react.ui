@@ -18,6 +18,6 @@ export const TableHead = React.forwardRef<
 
 TableHead.displayName = 'TableHead';
 
-export interface TableHeadProps extends React.HTMLAttributes<HTMLTableCellElement> {
+export interface TableHeadProps extends React.ThHTMLAttributes<HTMLTableCellElement> {
 
 }
