@@ -13,6 +13,7 @@ import { SelectSeparator, type SelectSeparatorProps } from './SelectSeparator';
 import { SelectTrigger, type SelectTriggerProps } from './SelectTrigger';
 
 export const Select = {
+  Root: SelectPrimitive.Root,
   Group: SelectPrimitive.Group,
   Content: SelectContent,
   Item: SelectItem,
