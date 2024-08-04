@@ -21,5 +21,7 @@ export * from './components/molecules/Table';
 export * from './components/organisms/DataTable';
 export * from './components/organisms/Form';
 
+export * from './components/templates/MainLayout';
+
 export * from './hooks';
 export * from './utils';
