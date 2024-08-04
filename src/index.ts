@@ -17,6 +17,7 @@ export * from './components/molecules/Select';
 export * from './components/molecules/Table';
 
 export * from './components/organisms/DataTable';
+export * from './components/organisms/Form';
 
 export * from './hooks';
 export * from './utils';
