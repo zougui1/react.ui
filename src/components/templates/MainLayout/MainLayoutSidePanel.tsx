@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { Paper } from '../../atoms/Paper';
 import { Typography } from '../../atoms/Typography';
 import { cn } from '../../../utils';
 
@@ -8,14 +9,19 @@ export const MainLayoutSidePanel = React.forwardRef<
   MainLayoutSidePanelProps
 >(({ title, children, className, ...rest }, ref) => {
   return (
-    <aside
-      {...rest}
-      ref={ref}
-      className={cn('flex flex-col items-center md:items-start bg-slate-900 rounded-md p-4 md:overflow-y-auto', className)}
-    >
-      {title && <Typography.H3>{title}</Typography.H3>}
-      {children}
-    </aside>
+    <Paper asChild>
+      <aside
+        {...rest}
+        ref={ref}
+        className={cn(
+          'flex flex-col items-center md:items-start',
+          className
+        )}
+      >
+        {title && <Typography.H3>{title}</Typography.H3>}
+        {children}
+      </aside>
+    </Paper>
   );
 });
 
