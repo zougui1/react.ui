@@ -2,7 +2,7 @@
 'use client';
 
 import * as SelectPrimitive from '@radix-ui/react-select';
-import type { SelectProps, SelectGroupProps } from '@radix-ui/react-select';
+import type { SelectProps, SelectGroupProps, SelectValueProps } from '@radix-ui/react-select';
 
 import { SelectContent, type SelectContentProps } from './SelectContent';
 import { SelectItem, type SelectItemProps } from './SelectItem';
@@ -14,6 +14,7 @@ import { SelectTrigger, type SelectTriggerProps } from './SelectTrigger';
 
 export const Select = {
   Root: SelectPrimitive.Root,
+  Value: SelectPrimitive.Value,
   Group: SelectPrimitive.Group,
   Content: SelectContent,
   Item: SelectItem,
@@ -26,7 +27,8 @@ export const Select = {
 
 export type {
   SelectProps as SelectRootProps,
-  SelectGroupProps as SelectGroupProps,
+  SelectGroupProps,
+  SelectValueProps,
   SelectContentProps,
   SelectItemProps,
   SelectLabelProps,
