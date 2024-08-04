@@ -27,6 +27,7 @@ export interface AutocompleteRootProps {
   values: (string | number)[];
   onValuesChange?: (values: (string | number)[]) => void;
   multiple?: boolean;
+  creatable?: boolean;
   disabled?: boolean;
   children?: React.ReactNode;
 }
