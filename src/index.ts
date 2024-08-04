@@ -1,4 +1,5 @@
 export * from './components/atoms/Button';
+export * from './components/atoms/Header';
 export * from './components/atoms/IconButton';
 export * from './components/atoms/Input';
 export * from './components/atoms/Label';
