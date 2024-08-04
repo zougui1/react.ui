@@ -1,3 +1,5 @@
+'use client';
+
 import { CommandRoot } from './CommandRoot';
 import { Dialog, type DialogRootProps } from '../Dialog';
 

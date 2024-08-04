@@ -1,3 +1,5 @@
+'use client';
+
 import { DataTableRoot, type DataTableRootProps } from './DataTableRoot';
 import { DataTableContent, type DataTableContentProps } from './DataTableContent';
 import { DataTableHeader, type DataTableHeaderProps } from './DataTableHeader';

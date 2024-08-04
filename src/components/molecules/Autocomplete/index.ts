@@ -1,3 +1,5 @@
+'use client';
+
 import { AutocompleteRoot, type AutocompleteRootProps } from './AutocompleteRoot';
 import { AutocompleteTrigger, type AutocompleteTriggerProps } from './AutocompleteTrigger';
 import { AutocompleteValue, type AutocompleteValueProps } from './AutocompleteValue';

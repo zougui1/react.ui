@@ -1,3 +1,5 @@
+'use client';
+
 import { createContext, useContext, useState, useMemo, useCallback } from 'react';
 
 export interface AutocompleteOption {

@@ -1,3 +1,5 @@
+'use client';
+
 import { useDataTable } from './context';
 import { Button } from '../../atoms/Button';
 

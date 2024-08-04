@@ -1,3 +1,5 @@
+'use client';
+
 import { DataTableProvider, type DataTableProviderProps } from './context';
 
 export function DataTableRoot<T>({ children, ...rest }: DataTableRootProps<T>) {

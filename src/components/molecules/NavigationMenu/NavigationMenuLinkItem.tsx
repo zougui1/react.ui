@@ -1,3 +1,5 @@
+'use client';
+
 import { NavigationMenuItem, type NavigationMenuItemProps } from '@radix-ui/react-navigation-menu';
 
 import { NavigationMenuLink, type NavigationMenuLinkProps } from './NavigationMenuLink';
