@@ -5,6 +5,7 @@ import { DataTableContent, type DataTableContentProps } from './DataTableContent
 import { DataTableHeader, type DataTableHeaderProps } from './DataTableHeader';
 import { DataTableBody, type DataTableBodyProps } from './DataTableBody';
 import { DataTablePagination, type DataTablePaginationProps } from './DataTablePagination';
+import { createSortedHead, getCellArrayLength, getCellValue } from './utils';
 
 export const DataTable = {
   Root: DataTableRoot,
@@ -22,4 +23,4 @@ export type {
   DataTablePaginationProps,
 };
 
-export * from './utils';
+export { createSortedHead, getCellArrayLength, getCellValue };
