@@ -13,5 +13,6 @@ export * from './components/molecules/Dropdown';
 export * from './components/molecules/Popover';
 export * from './components/molecules/NavigationMenu';
 export * from './components/molecules/Select';
+export * from './components/molecules/Table';
 
 export * from './utils';
