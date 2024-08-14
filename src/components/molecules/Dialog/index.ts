@@ -17,6 +17,8 @@ import { DialogOverlay, type DialogOverlayProps } from './DialogOverlay';
 import { DialogTitle, type DialogTitleProps } from './DialogTitle';
 
 export const Dialog = {
+  Primitive: DialogPrimitive,
+
   Root: DialogPrimitive.Root,
   Trigger: DialogPrimitive.Trigger,
   Portal: DialogPrimitive.Portal,
