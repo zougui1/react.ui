@@ -1,3 +1,5 @@
+import { Slot } from '@radix-ui/react-slot';
+
 export * from './components/atoms/Button';
 export * from './components/atoms/Container';
 export * from './components/atoms/Header';
@@ -27,3 +29,9 @@ export * from './components/templates/MainLayout';
 
 export * from './hooks';
 export * from './utils';
+
+export {
+  Slot,
+};
+
+export type SlotProps = React.ComponentProps<typeof Slot>;
