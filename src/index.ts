@@ -1,6 +1,7 @@
 import { Slot } from '@radix-ui/react-slot';
 
 export * from './components/atoms/Button';
+export * from './components/atoms/Checkbox';
 export * from './components/atoms/Container';
 export * from './components/atoms/Header';
 export * from './components/atoms/IconButton';
