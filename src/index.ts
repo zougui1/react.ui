@@ -29,6 +29,8 @@ export * from './components/organisms/Form';
 
 export * from './components/templates/MainLayout';
 
+export * from './components/utils/MatchMedia';
+
 export * from './hooks';
 export * from './utils';
 
