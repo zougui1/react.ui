@@ -19,7 +19,6 @@ export const NavigationMenuRoot = React.forwardRef<
     )}
   >
     {children}
-    <NavigationMenuViewport />
   </NavigationMenuPrimitive.Root>
 ));
 
