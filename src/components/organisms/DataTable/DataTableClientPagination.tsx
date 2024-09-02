@@ -1,40 +1,36 @@
 'use client';
 
 import { useDataTable } from './context';
-import { Button } from '../../atoms/Button';
+import { DataTablePagination } from './DataTablePagination';
 
-export const DataTablePagination = () => {
+export const DataTableClientPagination = () => {
   const table = useDataTable();
 
   return (
-    <div className="flex items-center py-4">
-      <div className="flex-1 text-sm text-muted-foreground space-x-2">
+    <DataTablePagination.Root>
+      <DataTablePagination.Content>
         <span>
           Page {table.getState().pagination.pageIndex + 1} of{' '}
           {table.getPageCount().toLocaleString()}
         </span>
 
-        <Button
-          variant="outline"
-          size="sm"
+        <DataTablePagination.Button
           onClick={() => table.previousPage()}
           disabled={!table.getCanPreviousPage()}
         >
           Previous
-        </Button>
-        <Button
-          variant="outline"
-          size="sm"
+        </DataTablePagination.Button>
+        <DataTablePagination.Button
           onClick={() => table.nextPage()}
           disabled={!table.getCanNextPage()}
         >
           Next
-        </Button>
-      </div>
-    </div>
+        </DataTablePagination.Button>
+      </DataTablePagination.Content>
+    </DataTablePagination.Root>
   );
 }
 
-export interface DataTablePaginationProps {
+export interface DataTableClientPaginationProps {
   children?: React.ReactNode;
 }
