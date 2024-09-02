@@ -1,6 +1,11 @@
 'use client';
 
-import { createContext, useContext, useState, useMemo } from 'react';
+import {
+  createContext,
+  useContext,
+  useState,
+  useMemo,
+} from 'react';
 
 import {
   useReactTable,
@@ -18,12 +23,19 @@ export type DataTableContextState = Table<unknown>;
 
 export const DataTableContext = createContext<DataTableContextState | undefined>(undefined);
 
-export function DataTableProvider<T>({ children, data, columns }: DataTableProviderProps<T>) {
+export function DataTableProvider<T>({ children, data, columns, defaultPage, pageSize }: DataTableProviderProps<T>) {
   const [sorting, setSorting] = useState<SortingState>([]);
-  const [pagination, setPagination] = useState<PaginationState>({
-    pageIndex: 0,
+  const [internalPagination, setInternalPagination] = useState<PaginationState>({
+    pageIndex: defaultPage ? defaultPage - 1 : 0,
     pageSize: 10,
   });
+
+  const pagination = useMemo(() => {
+    return {
+      ...internalPagination,
+      pageSize: pageSize ?? internalPagination.pageSize,
+    };
+  }, [internalPagination, pageSize]);
 
   const table = useReactTable<unknown>({
     data,
@@ -33,7 +45,7 @@ export function DataTableProvider<T>({ children, data, columns }: DataTableProvi
     getPaginationRowModel: getPaginationRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
-    onPaginationChange: setPagination,
+    onPaginationChange: setInternalPagination,
     state: {
       sorting,
       pagination,
@@ -67,6 +79,8 @@ export interface DataTableProviderProps<T> {
   data: T[];
   columns: ColumnDef<T>[];
   children?: React.ReactNode;
+  defaultPage?: number;
+  pageSize?: number;
 }
 
 export const useDataTable = (): DataTableContextState => {
