@@ -35,10 +35,10 @@ const iconButtonVariants = tv({
 
 export const IconButton = React.forwardRef<HTMLButtonElement, IconButtonProps>(
   ({ className, size, children, ...rest }, ref) => {
-    const { base, icon } = iconButtonVariants({ size, className });
+    const { base, icon } = iconButtonVariants({ size });
 
     return (
-      <Button {...rest} ref={ref} variant="ghost" className={base()}>
+      <Button {...rest} ref={ref} variant="ghost" className={base({ className })}>
         <Slot className={icon()}>
           {children}
         </Slot>
