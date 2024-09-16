@@ -18,7 +18,7 @@ import { cn } from '../../../utils';
 export const FormInput = <
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
->({ label, error, onChange, className, readOnly, ...rest }: FormInputProps<TFieldValues, TName>) => {
+>({ label, placeholder, error, onChange, defaultValue, className, readOnly, ...rest }: FormInputProps<TFieldValues, TName>) => {
   const handleNameChange = (handler: (e: React.ChangeEvent<HTMLInputElement>) => void) => (e: React.ChangeEvent<HTMLInputElement>) => {
     onChange?.(e);
     handler(e);
@@ -29,11 +29,13 @@ export const FormInput = <
       {...rest}
       render={({ field }) => (
         <FormItem className={cn('flex flex-col', className)}>
-          <FormLabel>{label}</FormLabel>
+          {label && <FormLabel>{label}</FormLabel>}
 
           <FormControl>
             <Input
               {...field}
+              placeholder={placeholder}
+              defaultValue={defaultValue}
               readOnly={readOnly}
               onChange={handleNameChange(field.onChange)}
             />
@@ -50,7 +52,9 @@ export interface FormInputProps<
   TFieldValues extends FieldValues = FieldValues,
   TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
 > extends Pick<ControllerProps<TFieldValues, TName>, 'control' | 'name'> {
-  label: string;
+  label?: string;
+  placeholder?: string;
+  defaultValue?: ControllerProps<TFieldValues, TName>['defaultValue'];
   error?: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
   className?: string;
